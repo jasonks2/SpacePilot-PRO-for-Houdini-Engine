@@ -1,3 +1,7 @@
+##################
+# Author: jasonks2
+##################
+
 import time
 import hou
 import numpy
