@@ -23,11 +23,11 @@ await the "Initializing.." message
 
 Compile spacenavd by using "--disable-x11" and "--prefix=.." flag (see link above)
 
-<img src = "Screenshots/spacenavd.png" width = "200px">
+<img src = "Screenshots/spacenavd.png" width = "700px">
 
 Compile libspnav by using "--disable-x11" and "--prefix=.." flag (see link above)
 
-<img src = "Screenshots/libspnav.png" width = "200px">
+<img src = "Screenshots/libspnav.png" width = "700px">
 
 ** 3. Build PipeOut applications **
 
@@ -45,7 +45,7 @@ Run -> ./pipeout /tmp/chop.pipe
 
 Await "Looking for reader"
 
-<img src = "Screenshots/pipeout.png" width = "200px">
+<img src = "Screenshots/pipeout.png" width = "700px">
 ** 5. Start Houdini Engine **
 
 Load and execute Python file space_mouse.py
