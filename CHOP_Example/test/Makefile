@@ -7,7 +7,7 @@ APPNAME = pipeout
 
 CPPFILES =	PPDOUT_Main.C
 
-SPNAV_DIR = /localhome/jasonks2/Desktop/libspnav/libspnav-master
+SPNAV_DIR = ../../libspnav/libspnav-master
 SPNAV_INCL = -I/${SPNAV_DIR}/src/
 
 SPNAV_LIBS = -L/${SPNAV_DIR} -lspnav

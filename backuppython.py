@@ -10,7 +10,7 @@ import numpy
 
 
 camera_paths = [] #many cameras in the scene
-
+pipein_paths = [] #many pipeins in the scene
 def makeHDA():
     obj = hou.node("/ch/ch1")
 
@@ -22,7 +22,18 @@ def makeHDA():
 
 
 def pilotTest():
-    pipein = hou.node("/ch/ch1/pipein1")
+
+    for p in hou.node('/ch').allSubChildren():
+        if p.type().name().startswith("pipein"):
+            pipein_paths.append(p.path())
+            
+    if len(pipein_paths) == 0: #create pipein node
+        ch = hou.node("/ch")
+        chop_net = ch.createNode("ch")
+        pipein = chop_net.createNode("pipein")
+    else:
+        pipein = hou.node(pipein_paths[0])
+    
     desktop = hou.ui.curDesktop()
     scene_viewer = desktop.paneTabOfType(hou.paneTabType.SceneViewer)
     viewport = scene_viewer.curViewport()
