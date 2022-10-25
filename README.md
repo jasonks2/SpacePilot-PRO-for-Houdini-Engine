@@ -59,7 +59,15 @@ As opposed to an .HDA. space_mouse.py will:
 	- Register a callback to read the space mouse at clock rate
 
 ** 7. Interact and give feedback! **
-       
+
+
+# TODO
+
+- Drop keyframes via button switch
+- Default position reset button
+- Extra button functions (generated waypath)
+- Attach Python to HDA
+- Record and Stop button to drop keyframes inbetween
 
 Thanks
 
