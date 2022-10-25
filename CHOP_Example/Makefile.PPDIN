@@ -1,0 +1,29 @@
+#!/bin/make -f
+#
+
+LIB	= PPDIN
+VERSION	= 1.0
+
+#-----------------------------------------------------------------------
+#   Please keep the list of sources sorted alphabetically
+#
+
+CPPFILES =  \
+	PPD_PipeIn.C
+
+OBJECTS=$(CPPFILES:.C=.o)
+
+#-----------------------------------------------------------------------
+
+default:	lib$(LIB).a
+
+lib$(LIB).a:	$(OBJECTS)
+	ar crv $@ $(OBJECTS)
+
+clean:
+	rm -f *.o core a.out
+
+clobber:	clean
+	rm -f *.a
+
+production:	default

@@ -1,0 +1,32 @@
+
+This files contains public domain libraries to create:
+
+A linux application which writes values in a PipeIn CHOP compatible format.
+A linux application which reads values from a PipeOut CHOP compatible format.
+
+A small test program is supplied for each library.
+The small test executable uses the library to output a pair of
+coordinates traveling on the edge of a circle.
+
+To test the application:
+
+make -f Makefile.PPDOUT
+cd test
+make -f Makefile.pipeout
+
+This should create an executable called pipeout.
+
+Execute:
+
+./pipeout /tmp/chop.pipe
+
+Now enter houdini and enter a default PipeIn CHOP.
+
+Once it is displayed, you should see two channels slowly oscillating
+out of phase. Its values are being supplied by the pipein application.
+If you export these values to an object it will trace the path
+of a circle.
+
+Alternatively, create the pipein application in a similiar fashion
+and execute this instead of houdini to read the changing values.
+

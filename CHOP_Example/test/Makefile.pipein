@@ -1,0 +1,33 @@
+#!/bin/make -f
+#
+
+APPNAME = pipein
+
+#-----------------------------------------------------------------------
+
+CPPFILES =	PPDIN_Main.C
+
+OBJECTS=$(CPPFILES:.C=.o)
+
+CXXFLAGS = -O -I..
+
+LDFLAGS = -L.. \
+	-lPPDIN \
+	-lm
+
+#-----------------------------------------------------------------------
+
+default:	$(APPNAME)
+
+$(APPNAME):	$(OBJECTS)
+	$(CXX) -o $@ $(OBJECTS) $(LDFLAGS)
+
+clean:
+	rm -f *.o a.out core
+
+clobber:	clean
+	rm -f $(APPNAME)
+
+install:
+
+production:
